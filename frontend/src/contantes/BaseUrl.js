@@ -1,0 +1,1 @@
+export const BASE_URL = "https://jessica-bento-case-shopper.herokuapp.com"
