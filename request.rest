@@ -1,0 +1,36 @@
+###
+GET http://localhost:3003/shopper/all
+
+###
+GET http://localhost:3003/shopper/product/16
+
+
+###
+POST http://localhost:3003/shopper/insert-pucharse
+Content-Type: application/json
+
+{
+    "nameProduct": "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",
+    "productId": "16",
+    "price": 20,
+    "amount": 20
+}
+
+###
+GET http://localhost:3003/shopper/pucharse-all
+
+
+###
+PUT http://localhost:3003/shopper/edit-amout/4e55b7b1-cbda-4e0f-85f7-44300d8db911
+Content-Type: application/json
+
+{
+    "productId": "16",
+    "amount": 30555
+}
+
+###
+DELETE http://localhost:3003/shopper/pucharse/07288cec-da76-4880-b940-7461415fada4
+
+###
+DELETE http://localhost:3003/shopper/delete/pucharse
