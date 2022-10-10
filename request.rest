@@ -21,16 +21,16 @@ GET http://localhost:3003/shopper/pucharse-all
 
 
 ###
-PUT http://localhost:3003/shopper/edit-amout/4e55b7b1-cbda-4e0f-85f7-44300d8db911
+PUT http://localhost:3003/shopper/edit-amout/07f66789-5205-40e6-8408-80ea8ba65425
 Content-Type: application/json
 
 {
     "productId": "16",
-    "amount": 30555
+    "amount": 2
 }
 
 ###
-DELETE http://localhost:3003/shopper/pucharse/07288cec-da76-4880-b940-7461415fada4
+DELETE http://localhost:3003/shopper/pucharse/07f66789-5205-40e6-8408-80ea8ba65425
 
 ###
 DELETE http://localhost:3003/shopper/delete/pucharse

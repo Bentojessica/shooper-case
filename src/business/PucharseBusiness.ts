@@ -24,7 +24,7 @@ export class PucharseBusiness {
             throw new invalidProduct();
         }
 
-        if(amount > product.amout) {
+        if(amount > product.amount) {
             throw new invalidAmount();
         }
 
@@ -53,7 +53,7 @@ export class PucharseBusiness {
         })
 
         const newAmountProduct = {
-            amout: Number(product.amout - amount)
+            amount: Number(product.amount - amount)
         }
 
 
@@ -108,7 +108,7 @@ export class PucharseBusiness {
             throw new invalidProduct();
         }
 
-        if(amount > product.amout) {
+        if(amount > product.amount) {
             throw new invalidAmount();
         }
 
