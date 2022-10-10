@@ -32,5 +32,19 @@ async getAllProduct (){
     }
 }
 
+async editProductAmout (product: ProductInsert, id: string) {
+    try {
+        await this.getConnection()
+    .update({
+        qty_stock: product.amout
+    })
+       .where({id})
+    .into(ProductDataBase.TABLE_PRODUCT )
+    } catch (error: any) {
+        throw new Error(error.message)
+    }
+
+}
+
 }
 
