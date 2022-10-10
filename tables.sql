@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS shopper_products(
-    id INT PRIMARY KEY,
+    id VARCHAR(255) PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    price INT NOT NULL,
+    price FLOAT NOT NULL,
     qty_stock INT NOT NULL
 );
 
@@ -9,11 +9,13 @@ CREATE TABLE IF NOT EXISTS shopper_pucharse (
     id VARCHAR(255) PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
     product_id VARCHAR(255),
-    price int,
+    price FLOAT,
     amount INT,
     total INT
 );
 
+INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("16", "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",	20.49, 158);
+INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("18", "BEBIDA ENERGÉTICA VIBE 2L", 8.99,	659);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("19","ENERGÉTICO RED BULL ENERGY DRINK 250ML",7.29,909);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("20","ENERGÉTICO RED BULL ENERGY DRINK 355ML",10.79,159);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("22","ENERGÉTICO RED BULL ENERGY DRINK SEM AÇÚCAR 250ML",7.49,659);
