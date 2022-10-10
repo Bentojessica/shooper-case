@@ -33,6 +33,7 @@ const CartPurchases = () => {
       .put(`${BASE_URL}/shopper/edit-amout/${idDaCompra}`, body)
       .then(() => {
         alert("Quantidade adicionada");
+        
         setters.setCartPurchase(states.cart);
       })
       .catch((error) => {
