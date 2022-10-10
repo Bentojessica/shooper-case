@@ -17,3 +17,9 @@ export class invalidPurchases extends BaseError{
         super("empty cart")
     }
 }
+
+export class productInCartExiste extends BaseError{
+    constructor(){
+        super("The product already exists in the cart change the quantity")
+    }
+}

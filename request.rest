@@ -13,7 +13,7 @@ Content-Type: application/json
     "nameProduct": "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",
     "productId": "16",
     "price": 20,
-    "amount": 20
+    "amount": 1
 }
 
 ###
