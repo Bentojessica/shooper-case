@@ -49,7 +49,7 @@ const Products = () => {
             R${item.price}
           </Typography>
           <Typography color="text.secondary">
-            {item.amout} disponíveis
+            {item.amount} disponíveis
           </Typography>
         </CardContent>
         <CardActions>
