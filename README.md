@@ -138,7 +138,7 @@ DB_PASSWORD =
 
 DB_SCHEMA =
 
-###No backend roda o comando:
+### No backend roda o comando:
 
 **npm install**
  
@@ -146,9 +146,9 @@ DB_SCHEMA =
  
  **npm run dev**
 
-##Na documentação está o deploy do backend, você pode usar ela para acessar os endpoint também!
+## Na documentação está o deploy do backend, você pode usar ela para acessar os endpoint também!
 
-###No frontend roda o comando:
+### No frontend roda o comando:
 
 **npm install**
 
