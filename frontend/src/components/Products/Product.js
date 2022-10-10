@@ -28,9 +28,9 @@ const Products = () => {
         alert("Adicionado no Carrinho");
       })
       .catch((error) => {
-        alert(error.message);
+        alert("Produto já adicionado no carrinho!")
       });
-  };
+}
 
   const product = states.cardProduct.map((item) => {
     return (

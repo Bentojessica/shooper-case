@@ -11,7 +11,7 @@ export const GlobalState = (props) => {
   useEffect(() => {
     selectAllProduct();
     selectCartPuchase();
-  }, []);
+  }, [cardProduct]);
 
   const selectAllProduct = () => {
     axios
