@@ -14,7 +14,7 @@ Projeto disponibilizado pela empresa Shopper para vaga de desenvolvedor(a) Full 
 
 [DOCUMENTAÇÃO](https://documenter.getpostman.com/view/19889845/2s83zfQkVz)
 
-[SURGE](http://quiet-store.surge.sh/)
+[SURGE](http://jealous-religion.surge.sh/)
 
 ## Linguagens e ferramentas utilizadas:
 
@@ -70,6 +70,8 @@ CREATE TABLE IF NOT EXISTS shopper_pucharse (
     total INT
 );
 
+INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("16", "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",	"20.49", 158);
+INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("18", "BEBIDA ENERGÉTICA VIBE 2L", "8.99",	659);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("19","ENERGÉTICO RED BULL ENERGY DRINK 250ML",7.29,909);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("20","ENERGÉTICO RED BULL ENERGY DRINK 355ML",10.79,159);
 INSERT INTO shopper_products (id,name, price, qty_stock) VALUES("22","ENERGÉTICO RED BULL ENERGY DRINK SEM AÇÚCAR 250ML",7.49,659);
