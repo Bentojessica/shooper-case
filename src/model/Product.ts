@@ -1,7 +1,7 @@
 export interface ProductInputDTO {
      name?: string,
      price?: number,
-     amout?: number
+     amount?: number
 }
 
 export interface ProductInsert extends ProductInputDTO {

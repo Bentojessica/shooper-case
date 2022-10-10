@@ -7,7 +7,7 @@ export class ProductDataBase extends BaseDataBase {
 async getProductById (id: string){
     try {
         const product = await this.getConnection()
-        .select("id", "name", "price", "qty_stock as amout")
+        .select("id", "name", "price", "qty_stock as amount")
         .where({id})
         .into(ProductDataBase.TABLE_PRODUCT)
 
@@ -21,7 +21,7 @@ async getProductById (id: string){
 async getAllProduct (){
     try {
         const product = await this.getConnection()
-        .select("id","name", "price", "qty_stock as amout")
+        .select("id","name", "price", "qty_stock as amount")
 
         .into(ProductDataBase.TABLE_PRODUCT)
 
@@ -36,7 +36,7 @@ async editProductAmout (product: ProductInsert, id: string) {
     try {
         await this.getConnection()
     .update({
-        qty_stock: product.amout
+        qty_stock: product.amount
     })
        .where({id})
     .into(ProductDataBase.TABLE_PRODUCT )
