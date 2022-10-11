@@ -7,4 +7,5 @@ export const ComponentCard = styled.div`
   grid-template-columns: repeat(4, 2fr);
   text-align: center;
   padding: 70px 10px;
+  margin: 0 auto;
 `;
