@@ -57,7 +57,7 @@ export class PucharseBusiness {
         }
 
 
-        if(filterProductById.length === 0) {
+        if(!filterProductById.length) {
             await pucharseDataBase.insertPucharse(newPurchases) 
             await productDataBase.editProductAmout(newAmountProduct, productId)
         }else {
@@ -90,7 +90,7 @@ export class PucharseBusiness {
 
         try {
 
-            const {amount, productId} = input
+            let {amount, productId} = input
 
             if(!id ) {
                 throw new invalidParams();
@@ -112,17 +112,30 @@ export class PucharseBusiness {
             throw new invalidAmount();
         }
 
+        const pucharseDataBase = new PucharseDataBase()
+
+        let pucharse = await pucharseDataBase.getAllPucharse()
+        
+        const filterProductById = pucharse.filter((item) => {
+            if(item.idDoProduto === productId) {
+                return {
+                    ...item
+                }
+            }
+        })
+
         const totalPrice = Number(product.price * amount)
         
         const newPurchases: PucharseInsert = {
+            productId,
             amount,
             totalPrice
         }
 
 
-        
-        const pucharseDataBase = new PucharseDataBase()
-        await pucharseDataBase.editPucharseAmout(newPurchases, id) 
+        if(filterProductById) {
+             await pucharseDataBase.editPucharseAmout(newPurchases, id) 
+        }
 
         } catch (error: any) {
             throw new Error(error.message)
@@ -135,8 +148,30 @@ export class PucharseBusiness {
                 throw new invalidParams();  
             } 
 
-        const pucharseDataBase = new PucharseDataBase()
-         await pucharseDataBase.deletPucharse(id)
+            const pucharseDataBase = new PucharseDataBase()
+            const pucharseAmount = await pucharseDataBase.getAllPucharse()
+
+            const productDataBase = new ProductDataBase()
+            const product = await productDataBase.getAllProduct()
+
+        const filterProductById = pucharseAmount.filter((item) => {
+            if(Number(item.idDoProduto === product[0].id)) {
+                return {
+                    ...item
+                }
+            }
+        })
+
+        const newAmountProduct = {
+            amount: Number(product[0].amount + pucharseAmount[0].quantidade)
+        }
+
+        const idDoProduto = pucharseAmount[0].idDoProduto 
+
+        if(filterProductById) {
+            await productDataBase.editProductAmout(newAmountProduct, idDoProduto)
+            await pucharseDataBase.deletPucharse(id)
+        }
 
         } catch (error: any) {
             throw new Error(error.message)
