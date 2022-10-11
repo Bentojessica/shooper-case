@@ -84,7 +84,7 @@ const CartPurchases = () => {
     states.cartPurchase &&
     states.cartPurchase.map((product) => {
       preco += product.total;
-
+ 
       return (
         <Card sx={{ maxWidth: 300 }} key={product.idDaCompra}>
           <CardMedia component="img" height="140" src={icon} alt="produto"/>
