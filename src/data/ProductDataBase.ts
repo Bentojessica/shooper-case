@@ -38,7 +38,7 @@ async editProductAmout (product: ProductInsert, id: string) {
     .update({
         qty_stock: product.amount
     })
-       .where({id})
+       .where({"shopper_products.id": id})
     .into(ProductDataBase.TABLE_PRODUCT )
     } catch (error: any) {
         throw new Error(error.message)

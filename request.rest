@@ -12,7 +12,7 @@ Content-Type: application/json
 {
     "nameProduct": "AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML",
     "productId": "16",
-    "price": 20,
+    "price": 20.49,
     "amount": 1
 }
 
@@ -21,7 +21,7 @@ GET http://localhost:3003/shopper/pucharse-all
 
 
 ###
-PUT http://localhost:3003/shopper/edit-amout/07f66789-5205-40e6-8408-80ea8ba65425
+PUT http://localhost:3003/shopper/edit-amout/210215c9-1f91-44c3-be1a-251081bb2103
 Content-Type: application/json
 
 {
@@ -30,7 +30,6 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3003/shopper/pucharse/07f66789-5205-40e6-8408-80ea8ba65425
-
+DELETE http://localhost:3003/shopper/pucharse/210215c9-1f91-44c3-be1a-251081bb2103
 ###
 DELETE http://localhost:3003/shopper/delete/pucharse
