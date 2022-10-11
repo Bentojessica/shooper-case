@@ -14,7 +14,7 @@ Projeto disponibilizado pela empresa Shopper para vaga de desenvolvedor(a) Full 
 
 [DOCUMENTAÇÃO](https://documenter.getpostman.com/view/19889845/2s83zfQkVz)
 
-[SURGE](http://volatile-kick.surge.sh/)
+[SURGE](tasteless-store.surge.sh)
 
 ## Linguagens e ferramentas utilizadas:
 
